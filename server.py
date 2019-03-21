@@ -3,7 +3,7 @@ from flask import render_template
 import os
 app = Flask(__name__)
 
-domainName="https://list-himehowareu.c9users.io"
+domainName="localhost"
 
 def makeLink(address,name):
     return("<a href='%s'>%s</a>"%(domainName+address,name))
@@ -28,4 +28,4 @@ def listurl():
 def random(file):
     return render_template(file)
     
-app.run(host=os.getenv('IP', '0.0.0.0'),port=int(os.getenv('PORT', 8080)))
+app.run()
