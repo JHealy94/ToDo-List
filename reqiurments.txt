@@ -1,1 +1,3 @@
-Flask
+flask
+flask-SQLAlchemy
+Flask-WTF
