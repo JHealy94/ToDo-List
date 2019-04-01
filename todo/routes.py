@@ -8,10 +8,14 @@ from flask_login import login_user, logout_user, current_user, login_required
 @app.route("/")
 @app.route("/index")
 def index():
-    return render_template("index.html")
+    if current_user.is_authenticated:
+        return redirect(url_for('home'))
+    else:
+        return render_template("index.html")
 
 
 @app.route("/home")
+@login_required
 def home():
     return render_template("home.html")
 
@@ -26,6 +30,7 @@ def login():
         if user and bcrypt.check_password_hash(user.password, form.password.data):
             login_user(user, remember=form.remember.data)
             next_page = request.args.get('next')
+            flash(f'Welcome {user.name}.', 'success')
             return redirect(next_page) if next_page else redirect(url_for('home'))
         else:
             flash('Login Unsuccessful. Please check email and password', 'danger')
@@ -55,7 +60,8 @@ def register():
 @app.route("/logout")
 def logout():
     logout_user()
-    return redirect(url_for('home'))
+    flash('You have logged out successfully!', 'success')
+    return redirect(url_for('index'))
 
 
 @app.route("/account")
