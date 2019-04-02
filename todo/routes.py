@@ -1,6 +1,6 @@
 from flask import render_template, flash, url_for, redirect, request
 from todo import app, db, bcrypt
-from todo.forms import SignupForm, LoginForm
+from todo.forms import SignupForm, LoginForm, ListForm
 from todo.model import User, List, ListItem
 from flask_login import login_user, logout_user, current_user, login_required
 
@@ -8,12 +8,17 @@ from flask_login import login_user, logout_user, current_user, login_required
 @app.route("/")
 @app.route("/index")
 def index():
-    return render_template("index.html")
+    if current_user.is_authenticated:
+        return redirect(url_for('home'))
+    else:
+        return render_template("index.html")
 
 
 @app.route("/home")
+@login_required
 def home():
-    return render_template("home.html")
+    lists = List.query.filter_by(user_id=current_user.id)
+    return render_template("home.html", lists=lists)
 
 
 @app.route("/login", methods=["get", "post"])
@@ -26,6 +31,7 @@ def login():
         if user and bcrypt.check_password_hash(user.password, form.password.data):
             login_user(user, remember=form.remember.data)
             next_page = request.args.get('next')
+            flash(f'Welcome {user.name}.', 'success')
             return redirect(next_page) if next_page else redirect(url_for('home'))
         else:
             flash('Login Unsuccessful. Please check email and password', 'danger')
@@ -55,11 +61,21 @@ def register():
 @app.route("/logout")
 def logout():
     logout_user()
-    return redirect(url_for('home'))
+    flash('You have logged out successfully!', 'success')
+    return redirect(url_for('index'))
 
 
 @app.route("/account")
 @login_required
 def account():
     return render_template('account.html', title='Account')
+
+
+@app.route("/home/list")
+@login_required
+def editlist():
+    form = ListForm()
+    if form.validate_on_submit():
+        flash('Your list as been created!', 'success')
+    return render_template('list.html', title=list, form=form)
 
