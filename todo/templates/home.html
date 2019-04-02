@@ -1,14 +1,25 @@
 {% extends "header.html" %}
 {% block content %}
 <h1>This is the users home</h1>
-<div class = "card">
-    <div class = "container">
-        <h3> {{ current_user.name }}</h3>
+{% for userlist in lists %}
+    <div class = "card">
+        <div class = "container">
+            <h3> {{ userlist.title }}</h3>
+            {% with items=ListItem.query.filter_by(list_id=userlist.id) %}
+                {% if items %}
+                    {% for item in items %}
+                        <p>{{ item.content }}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
     </div>
-</div>
-<div class = "card">
-    <div class = "container">
-        <h3> {{ current_user.name }}</h3>
+{% endfor %}
+<a href="{{ url_for('editlist') }}">
+    <div class = "card">
+        <div class = "container", style="text-align:center;">
+            <h3>New List</h3>
+        </div>
     </div>
-</div>
+</a>
 {% endblock content %}

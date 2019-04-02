@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, BooleanField
+from wtforms import StringField, PasswordField, SubmitField, BooleanField, FieldList
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
 from todo.model import User
 
@@ -30,4 +30,5 @@ class LoginForm(FlaskForm):
 
 class ListForm(FlaskForm):
     title = StringField('Title', validators=[DataRequired()])
+    content = FieldList('Items', validators=[DataRequired()])
     submit = SubmitField('Done')
