@@ -33,6 +33,7 @@ class List(db.Model):
 
 class ListItem(db.Model):
     list_id = db.Column(db.Integer, db.ForeignKey('list.id'), primary_key=True, nullable=False)
+    id = db.Column(db.Integer, nullable=False)
     content = db.Column(db.String(160), nullable=False)
     date_added = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
 
