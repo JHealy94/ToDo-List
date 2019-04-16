@@ -38,4 +38,4 @@ class ListItem(db.Model):
     date_added = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
 
     def __repr__(self):
-        return f"Item ('{self.list_id}', '{self.date_added}')"
+        return f"Item ('{self.list_id}', '{self.id}', '{self.date_added}')"
