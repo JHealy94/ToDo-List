@@ -1,15 +1,16 @@
 body {
-    background: #fafafa;
+    background: #222138;
     color: #333333;
     margin-top: 5rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: #444444;
+h1, h4, h5, h6 {
+    color: #ffffff;
 }
 
 .bg-steel {
-    background-color: #5f788a;
+    background-color: #5f788a;;
+
 }
 
 .site-header .navbar-nav .nav-link {
@@ -25,9 +26,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .content-section {
-    background: #ffffff;
+    background: #b0b0b6;
     padding: 10px 20px;
-    border: 1px solid #dddddd;
+    border: 1px solid #000000;
     border-radius: 3px;
     margin-bottom: 20px;
 }
@@ -75,23 +76,31 @@ a.article-title:hover {
     margin-bottom: 16px;
 }
 
-
-
 .account-heading {
     font-size: 2.5rem;
 }
 
-.card{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    width: 50%;
-    margin: auto;
+.strikethrough{
+  text-decoration: line-through;
 }
 
-.card:hover{
-    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+list-group-item:hover {
+    background-color: #428bca;
 }
 
-.container{
-    padding: 2px 16px;
+#bye:hover{
+    opacity:1;
+    border-radius: 100%;
+    text-align: center;
+    background-color: red;
+
+}
+#bye {
+    border-radius: 100%;
+    opacity:.2;
+    text-align: center;
+}
+
+#check {
+    transform: scale(1.5);
 }
