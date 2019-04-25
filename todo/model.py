@@ -25,7 +25,6 @@ class User(db.Model, UserMixin):
 
 
 class List(db.Model):
-    saved = db.Column(db.Boolean, default=False)
     id = db.Column(db.Integer, primary_key=True,unique=True)
     title = db.Column(db.String(100), nullable=False)
     date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
@@ -50,6 +49,7 @@ class ListItem(db.Model):
     id = db.Column(db.Integer, primary_key=True,unique=True)
     content = db.Column(db.String(160), nullable=False)
     date_added = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    checked = db.Column(db.Boolean, default=False)
 
     def __repr__(self):
         return f"Item ('{self.list_id}', '{self.date_added}')"

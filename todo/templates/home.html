@@ -16,7 +16,15 @@
         {% for item in items %}
         <p id="{{userlist.id}}-{{item.id}}">
             <button id="bye" type="button" class="close" aria-label="Close" onclick="deletelistItem({{userlist.id}},{{ item.id}});return false;">X</button>
-            {{ item.content }}
+            {% if item.checked %}
+            <div class="strikethrough">
+            <input id="check" type="checkbox" onclick="checkItem({{userlist.id}},{{ item.id}});return false;" checked>
+        {{ item.content }}</div>
+            {% else %}
+        <div>
+            <input id="check" type="checkbox" onclick="checkItem({{userlist.id}},{{ item.id}});return false;">
+        {{ item.content }}</div>
+            {% endif %}
         </p>
         {% endfor %}
         {% endif %}

@@ -71,4 +71,11 @@ def deleteItem(listId,itemId):
     #print(f"delete Item :{itemId} from list: {listId}")
     return f"ok"
 
+@app.route("/api/checkItem/<listId>/<itemId>")
+def checkItem(listId,itemId):
+    I = ListItem.query.filter_by(list_id=listId,id=itemId).first()
+    I.checked = not I.checked
+    db.session.add(I)
+    db.session.commit()
+    return f"ok"
 

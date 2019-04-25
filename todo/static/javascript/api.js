@@ -2,14 +2,14 @@ function newlist(name) {
     let request = new XMLHttpRequest()
     request.open('GET', 'api/newlist/' + name, true)
     request.send();
-    window.location.reload()
+    window.location.reload();
 }
 
 function newlistItem(list, item) {
     let request = new XMLHttpRequest()
     request.open('GET', 'api/newItem/' + list + "/" + item, true)
     request.send();
-    window.location.reload()
+    window.location.reload();
 }
 
 function deletelist(listId) {
@@ -33,6 +33,15 @@ function deletelist(listId) {
     })
 }
 
+function checkItem(listId, id) {
+    event.srcElement.parentElement.style.textDecoration="line-through"
+    let request = new XMLHttpRequest()
+    request.open('GET', 'api/checkItem/' + listId + '/' + id, true)
+    request.send();
+        window.location.reload();
+
+}
+
 function deletelistItem(listId, id) {
     let request = new XMLHttpRequest();
     document.getElementById(listId + '-' + id).remove();
@@ -42,6 +51,9 @@ function deletelistItem(listId, id) {
 
 function JSalertNewListItem(listID) {
     if (event.srcElement.tagName == "BUTTON") {
+        return false;
+    }
+    if (event.srcElement.id === "check") {
         return false;
     }
     if (event.srcElement.id === "bye") {

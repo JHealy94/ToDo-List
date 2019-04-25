@@ -34,7 +34,8 @@ class ResetRequestForm(FlaskForm):
 
 class ResetForm(FlaskForm):
     def vaildCode(form, field):
-        test = bcrypt.check_password_hash(current_user.password, form.password.data)
+        user = User.query.filter_by(token=form.code.data).first()
+        test = bcrypt.check_password_hash(user.password, form.password.data)
         if not test:
             raise ValidationError("Your code has expired")
 
