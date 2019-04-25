@@ -47,6 +47,7 @@ function deletelistItem(listId, id) {
     document.getElementById(listId + '-' + id).remove();
     request.open('GET', '/api/deleteItem/' + listId + '/' + id, true);
     request.send();
+     window.location.reload();
 }
 
 function JSalertNewListItem(listID) {
