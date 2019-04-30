@@ -1,0 +1,41 @@
+{% extends "header.html" %}
+{% block content %}
+<h1>Home</h1>
+{% for userlist in lists %}
+<div class="card" id="{{userlist.id}}" onclick="JSalertNewListItem('{{userlist.id}}');">
+    <div class="container">
+        <h2>
+            <div class="text-left align-middle">
+            <button id="bye" type="button" class="close" aria-label="Close" onclick="deletelist('{{userlist.id}}')">
+            x
+            </button>{{ userlist.title }}</div>
+
+        </h2>
+        {% with items=ListItem.query.filter_by(list_id=userlist.id) %}
+        {% if items %}
+        {% for item in items %}
+        <p id="{{userlist.id}}-{{item.id}}">
+            <button id="bye" type="button" class="close" aria-label="Close" onclick="deletelistItem({{userlist.id}},{{ item.id}});return false;">X</button>
+            {% if item.checked %}
+            <div class="strikethrough">
+            <input id="check" type="checkbox" onclick="checkItem({{userlist.id}},{{ item.id}});return false;" checked>
+        {{ item.content }}</div>
+            {% else %}
+        <div>
+            <input id="check" type="checkbox" onclick="checkItem({{userlist.id}},{{ item.id}});return false;">
+        {{ item.content }}</div>
+            {% endif %}
+        </p>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </div>
+</div>
+{% endfor %}
+<div id="new" class="card" onclick="JSalertNewList();">
+    <div class="container" , style="text-align:center;">
+        <h3>New List</h3>
+    </div>
+</div>
+</a>
+{% endblock content %}
