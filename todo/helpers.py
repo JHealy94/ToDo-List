@@ -6,17 +6,21 @@ from flask_mail import Message
 from todo import mail
 from todo.model import User, List, ListItem
 
+
 def sendEmail(email):
    msg = Message('Password Reset For ListIt', sender = 'raspberrypi.gaylord@gmail.com', recipients = [email])
    msg.body = f"This is your reset code {makeResetCode(email).decode('ascii')} if you did not requset this code you can pay this email no mind"
    mail.send(msg)
 
+
 def makeResetCode(email):
     return User.query.filter_by(email=email).first().token
+
 
 def getUserFromCode(code):
     user = User.query.filter_by(token=code)
     return user.first()
+
 
 def save_picture(form_picture):
     random_hex = secrets.token_hex(8)

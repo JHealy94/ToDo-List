@@ -120,4 +120,5 @@ def account():
     elif request.method == 'GET':
         form.name.data = current_user.name
         form.email.data = current_user.email
+
     return render_template('account.html', title='Account', form=form)

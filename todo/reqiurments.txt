@@ -1,9 +1,0 @@
-flask
-flask-SQLAlchemy
-Flask-WTF
-flask-bcrypt
-flask-login
-flask_mail
-Flask-Migrate
-alembic
-Pillow
