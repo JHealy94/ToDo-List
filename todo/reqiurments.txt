@@ -1,4 +1,4 @@
-flask
+lask
 flask-SQLAlchemy
 Flask-WTF
 flask-bcrypt
