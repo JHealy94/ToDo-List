@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a1bbb21-b864-4b39-bf42-84d959f58263" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/todo/templates/hello.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todo/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todo/templates/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todo/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/venv/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,11 +54,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/todo/app.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
@@ -71,6 +63,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/todo/templates/index.html">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -119,7 +120,7 @@
           <entry type="REMOTE">
             <value>
               <list>
-                <branch-info repo="$PROJECT_DIR$" source="origin/John" />
+                <branch-info repo="$PROJECT_DIR$" source="origin/James" />
               </list>
             </value>
           </entry>
@@ -156,7 +157,6 @@
         <option value="$PROJECT_DIR$/todo-list/templates/routes.py" />
         <option value="$PROJECT_DIR$/todo-list/routes.py" />
         <option value="$PROJECT_DIR$/todo/dbmodel.py" />
-        <option value="$PROJECT_DIR$/server.py" />
         <option value="$PROJECT_DIR$/todo/forms.py" />
         <option value="$PROJECT_DIR$/todo/templates/account.html" />
         <option value="$PROJECT_DIR$/todo/routes.py" />
@@ -172,6 +172,8 @@
         <option value="$PROJECT_DIR$/todo/static/style.css" />
         <option value="$PROJECT_DIR$/todo/model.py" />
         <option value="$PROJECT_DIR$/todo/helpers.py" />
+        <option value="$PROJECT_DIR$/todo/reqiurments.txt" />
+        <option value="$PROJECT_DIR$/server.py" />
       </list>
     </option>
   </component>
@@ -219,6 +221,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vahri\Documents\software engi\New folder\ToDo-List" />
       <recent name="C:\Users\James\Documents\GitHub\ToDo-List" />
       <recent name="C:\Users\James\Documents\GitHub\ToDo-List\todo-list" />
     </key>
@@ -381,7 +384,28 @@
       <option name="project" value="LOCAL" />
       <updated>1556653591003</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="got missing html files">
+      <created>1556653657119</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1556653657119</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fixed file locations">
+      <created>1556653856590</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1556653856590</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fixed file locations">
+      <created>1556653890533</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1556653890533</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -395,19 +419,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21268164" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32956153" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.6251768" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3281471" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.91017175" weight="0.3281471" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.91611624" visible="true" weight="0.2545969" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.91611624" weight="0.2545969" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.08982827" side_tool="true" weight="0.3281471" />
       <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49894625" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -481,7 +506,8 @@
     <MESSAGE value="nuke" />
     <MESSAGE value="rebased" />
     <MESSAGE value="got missing html files" />
-    <option name="LAST_COMMIT_MESSAGE" value="got missing html files" />
+    <MESSAGE value="fixed file locations" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed file locations" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Eisa's To do List/ToDoList.html" />
@@ -540,10 +566,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/todo/templates/about.html">
+    <entry file="file://$PROJECT_DIR$/todo/templates/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/todo/app.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todo/templates/about.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
@@ -553,8 +582,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/todo/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/todo/reqiurments.txt">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
