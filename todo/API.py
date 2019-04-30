@@ -30,7 +30,6 @@ def newList(name="newist"):
     newList = List(title=name, user_id=current_user.id, author=current_user)
     db.session.add(newList)
     db.session.commit()
-    #print(f"make new list named {newList.id}")
     return f"{newList.id}"
 
 @app.route("/api/deleteList/<listId>")
@@ -39,11 +38,9 @@ def deleteList(listId):
     L = List.query.filter_by(id=listId).first()
     items = ListItem.query.filter_by(list_id=listId)
     for item in items:
-        #print(f"delete Item :{item} from list: {listId}")
         db.session.delete(item)
     db.session.delete(L)
     db.session.commit()
-    #print(f"delete list with id:{listId}")
     return f"ok"
 
 @app.route("/api/lists")
@@ -59,16 +56,13 @@ def newItem(listid,item):
     new = ListItem(list_id=listid, content=item, list=editing)
     db.session.add(new)
     db.session.commit()
-    #print(f"make item '{item}' in list :{listid}")
     return url_for("getLists")
 
 @app.route("/api/deleteItem/<listId>/<itemId>")
 def deleteItem(listId,itemId):
     I = ListItem.query.filter_by(list_id=listId,id=itemId).first()
-    #print(I)
     db.session.delete(I)
     db.session.commit()
-    #print(f"delete Item :{itemId} from list: {listId}")
     return f"ok"
 
 @app.route("/api/checkItem/<listId>/<itemId>")

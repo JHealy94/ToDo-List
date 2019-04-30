@@ -3,7 +3,6 @@
 <head>
 
     <!--SweetAlert -->
-
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7"></script>
 
     <!-- Required meta tags -->
@@ -19,9 +18,9 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 
     {% if title %}
-    <title>ToDo list - {{ title }}</title>
+    <title>ListIt - {{ title }}</title>
     {% else %}
-    <title>ToDo list</title>
+    <title>ListIt</title>
     {% endif %}
 
 </head>
@@ -95,12 +94,12 @@
         <div class="col-md-4">
             <div class="content-section">
                 <h3>Our Sidebar</h3>
-                <p class='text-muted'>You can put any information here you'd like.
+                <p class='text-muted'>Up coming features
                 <ul class="list-group">
-                    <li class="list-group-item list-group-item-action list-group-item-light">Latest Posts</li>
-                    <li class="list-group-item list-group-item-action list-group-item-light">Announcements</li>
-                    <li class="list-group-item list-group-item-action list-group-item-light">Calendars</li>
-                    <li class="list-group-item list-group-item-action list-group-item-light">etc</li>
+                    <li class="list-group-item list-group-item-light">Folders</li>
+                    <li class="list-group-item list-group-item-light">Shearing lists</li>
+                    <li class="list-group-item list-group-item-light">Color Coding</li>
+                    <li class="list-group-item list-group-item-light">Live editing</li>
                 </ul>
                 </p>
             </div>

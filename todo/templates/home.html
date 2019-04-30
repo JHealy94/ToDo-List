@@ -1,6 +1,6 @@
 {% extends "header.html" %}
 {% block content %}
-<h1>This is the users home</h1>
+<h1>Home</h1>
 {% for userlist in lists %}
 <div class="card" id="{{userlist.id}}" onclick="JSalertNewListItem('{{userlist.id}}');">
     <div class="container">

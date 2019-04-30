@@ -51,7 +51,7 @@ def register():
     form = SignupForm()
     if form.validate_on_submit():
         hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
-        new_token=bcrypt.generate_password_hash(hashed_password)
+        new_token=bcrypt.generate_password_hash(hashed_password).decode()
         user = User(name=form.name.data, email=form.email.data, password=hashed_password, token=new_token)
         db.session.add(user)
         db.session.commit()
@@ -74,7 +74,7 @@ def reset():
     if form.validate_on_submit():
         code = form.code.data
         user = getUserFromCode(code)
-        hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
+        hashed_password = bcrypt.generate_password_hash(form.password.data).decode()
         user.password = hashed_password
         db.session.commit()
         flash('Your Password has been updated!', 'success')

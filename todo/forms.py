@@ -1,5 +1,6 @@
 from flask_wtf.file import FileAllowed
 from todo import bcrypt
+from todo.helpers import getUserFromCode
 from todo.model import User
 from flask_wtf import FlaskForm
 from flask_login import current_user
@@ -34,9 +35,9 @@ class ResetRequestForm(FlaskForm):
 
 class ResetForm(FlaskForm):
     def vaildCode(form, field):
-        user = User.query.filter_by(token=form.code.data).first()
-        test = bcrypt.check_password_hash(user.password, form.password.data)
-        if not test:
+        user = getUserFromCode(field.data)
+        print(user)
+        if not user:
             raise ValidationError("Your code has expired")
 
     code = StringField('Code', validators=[vaildCode])
@@ -44,11 +45,6 @@ class ResetForm(FlaskForm):
     confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password')])
     submit = SubmitField('Reset Password')
 
-
-class ListForm(FlaskForm):
-    title = StringField('Title', validators=[DataRequired()])
-    content = FieldList('Items', validators=[DataRequired()])
-    submit = SubmitField('Done')
 
 
 class UpdateAccountForm(FlaskForm):

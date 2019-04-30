@@ -15,8 +15,8 @@ def makeResetCode(email):
     return User.query.filter_by(email=email).first().token
 
 def getUserFromCode(code):
-    user = User.query.filter_by(token=code).first()
-    return user
+    user = User.query.filter_by(token=code)
+    return user.first()
 
 def save_picture(form_picture):
     random_hex = secrets.token_hex(8)
