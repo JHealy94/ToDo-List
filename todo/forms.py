@@ -36,7 +36,6 @@ class ResetRequestForm(FlaskForm):
 class ResetForm(FlaskForm):
     def vaildCode(form, field):
         user = getUserFromCode(field.data)
-        print(user)
         if not user:
             raise ValidationError("Your code has expired")
 
