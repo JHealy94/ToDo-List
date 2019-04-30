@@ -4,25 +4,6 @@ from todo.model import User, List, ListItem
 from flask_login import login_user, logout_user, current_user, login_required
 from todo.helpers import sendEmail, getUserFromCode
 
-@app.route("/api/testing")
-@login_required
-def testing():
-    return render_template('testing.html')
-
-@app.route("/api/test")
-def maketestingUser():
-    user = User.query.filter_by(email="test@example.com").first()
-    if user:
-        login_user(user)
-        return redirect(url_for('testing'))
-    hashed_password = bcrypt.generate_password_hash("test").decode('utf-8')
-    new_token = bcrypt.generate_password_hash(hashed_password)
-    user = User(name="test", email="test@example.com", password=hashed_password, token=new_token)
-    db.session.add(user)
-    db.session.commit()
-    flash('Your account has been created! You can now login', 'success')
-    login_user(user)
-    return redirect(url_for('testing'))
 
 @app.route("/api/newlist/<name>")
 @login_required

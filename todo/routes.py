@@ -96,6 +96,7 @@ def resetRequest():
             flash('Login Unsuccessful. Please check email and password', 'danger')
     return render_template("requestReset.html", title="Reset", form=form)
 
+
 @app.route("/home/list")
 @login_required
 def editlist():
@@ -103,6 +104,7 @@ def editlist():
     if form.validate_on_submit():
         flash('Your list as been created!', 'success')
     return render_template('list.html', title=list, form=form)
+
 
 @app.route("/account", methods=['GET', 'POST'])
 @login_required
