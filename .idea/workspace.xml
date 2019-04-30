@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a1bbb21-b864-4b39-bf42-84d959f58263" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/ToDo-List.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ToDo-List.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/helpers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/model.py" afterDir="false" />
-    </list>
+    <list default="true" id="7a1bbb21-b864-4b39-bf42-84d959f58263" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/venv/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +58,11 @@
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -111,7 +109,7 @@
           <entry type="REMOTE">
             <value>
               <list>
-                <branch-info repo="$PROJECT_DIR$" source="origin/James" />
+                <branch-info repo="$PROJECT_DIR$" source="origin/John" />
               </list>
             </value>
           </entry>
@@ -189,6 +187,18 @@
               <item name="ToDo-List" type="b2602c69:ProjectViewProjectNode" />
               <item name="ToDo-List" type="462c0819:PsiDirectoryNode" />
               <item name="todo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ToDo-List" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ToDo-List" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ToDo-List" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ToDo-List" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -353,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556223245231</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="rebased">
+      <created>1556653252184</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1556653252184</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -373,14 +390,14 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.16690241" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.6251768" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3281471" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.8566711" weight="0.3281471" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.91611624" weight="0.2545969" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.083883755" side_tool="true" weight="0.2545969" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.91017175" weight="0.3281471" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.91611624" visible="true" weight="0.2545969" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.08982827" side_tool="true" weight="0.3281471" />
       <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49894625" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -519,7 +536,11 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
